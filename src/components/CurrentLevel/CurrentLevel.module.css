@@ -1,0 +1,19 @@
+.row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+.badgeStage { position: relative; flex: 0 0 76px; height: 76px; display:grid; place-items:center; }
+.badgeGlow { position:absolute; inset:-10px; border-radius:50%; background:radial-gradient(circle, rgba(240,193,75,.28), transparent 68%); filter:blur(5px); }
+.badgeShadow { position:absolute; left:50%; bottom:-3px; width:56%; height:8px; transform:translateX(-50%); border-radius:50%; background:radial-gradient(ellipse, rgba(0,0,0,.5), transparent 72%); }
+.badge { position:relative; width:76px; height:auto; filter:drop-shadow(0 7px 10px rgba(0,0,0,.4)); }
+.textCol { display:flex; flex-direction:column; gap:4px; min-width:0; }
+.name { color:var(--text-secondary); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+.name::first-letter { color: var(--gold); }
+.xp { font-family:var(--font-display); font-size:2.05rem; line-height:1.05; font-weight:800; color:var(--text-primary); letter-spacing:-.035em; }
+@media (max-width: 480px) { .row { gap:14px; } .badgeStage, .badge { width:68px; flex-basis:68px; } .xp { font-size:1.65rem; } }
+@media (max-width: 360px) { .badgeStage, .badge { width:60px; flex-basis:60px; } .xp { font-size:1.45rem; } }
+@media (prefers-reduced-motion: reduce) { .badgeGlow { animation:none; } }

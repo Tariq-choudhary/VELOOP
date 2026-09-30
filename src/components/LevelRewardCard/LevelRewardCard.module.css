@@ -1,0 +1,4 @@
+.chip { display:inline-flex; align-items:center; gap:6px; color:var(--gold-soft); background:rgba(240,193,75,.075); border:1px solid rgba(240,193,75,.24); padding:4px 9px; border-radius:999px; white-space:nowrap; font-weight:700; }
+.chip.lg { font-size:.98rem; padding:7px 12px; }
+.chip.sm { font-size:.68rem; padding:3px 8px; }
+.chip.locked { color:#7c8498; background:rgba(255,255,255,.035); border-color:rgba(255,255,255,.08); }

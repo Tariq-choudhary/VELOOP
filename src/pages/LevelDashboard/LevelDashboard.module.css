@@ -1,0 +1,37 @@
+.section { margin-bottom: 18px; min-width: 0; }
+
+/* Reference layout: full-width level hero, then a 2-column progression row,
+   then the game/earn/activity content below. */
+.gridHero {
+  display: block;
+  margin-bottom: 18px;
+}
+.gridHero > * { min-width: 0; }
+.playAndEarnCol { display: block; min-width: 0; }
+.playAndEarnCol > * { width: 100%; }
+
+.gridTwo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, .85fr);
+  gap: 18px;
+  margin-bottom: 18px;
+  align-items: stretch;
+}
+.gridTwo > * { min-width: 0; }
+
+.gridTwoEven {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, .85fr);
+  gap: 18px;
+  margin-bottom: 18px;
+  align-items: stretch;
+}
+.gridTwoEven > * { min-width: 0; }
+
+@media (max-width: 991px) {
+  .gridTwo, .gridTwoEven { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+  .gridTwo, .gridTwoEven { gap: 14px; margin-bottom: 14px; }
+  .gridHero { margin-bottom: 14px; }
+}

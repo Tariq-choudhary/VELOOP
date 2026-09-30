@@ -1,0 +1,57 @@
+.wrap {
+  position: relative;
+  z-index: 40;
+  margin: 0 0 20px;
+}
+.row {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-height:50px;
+}
+.menuBtn,.iconBtn {
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.025);
+  color:var(--text-secondary);
+  cursor:pointer;
+  transition:transform .16s ease,border-color .16s ease,color .16s ease,background .16s ease;
+}
+.menuBtn:hover,.iconBtn:hover { color:var(--gold); border-color:rgba(240,193,75,.28); background:rgba(240,193,75,.05); }
+.menuBtn:active,.iconBtn:active { transform:scale(.94); }
+.greeting { flex:1; min-width:0; }
+.greetingTitle { margin:0; font-family:var(--font-display); font-size:1.18rem; line-height:1.2; font-weight:700; letter-spacing:-.02em; color:var(--text-primary); }
+.greetingTitle span { color:var(--text-primary); }
+.greetingTitle strong { color:#f7f8fb; font-weight:800; }
+.greetingSub { margin:2px 0 0; font-size:.74rem; line-height:1.25; color:var(--text-secondary); max-width:430px; }
+.bellWrap { position:relative; flex:0 0 auto; }
+.badge { position:absolute; top:-3px; right:-3px; min-width:15px; height:15px; padding:0 4px; display:grid; place-items:center; border-radius:999px; background:var(--gold); color:#241b08; font-size:.54rem; font-weight:900; border:2px solid var(--bg); }
+.bellPanel { position:absolute; top:47px; right:0; width:255px; max-width:calc(100vw - 28px); padding:12px; border-radius:16px; border:1px solid var(--border-strong); background:#151b25; box-shadow:0 18px 40px rgba(0,0,0,.42); }
+.bellPanelHeader { margin-bottom:8px; color:var(--text-muted); font-size:.65rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+.bellEmpty { margin:0; padding:5px 0; color:var(--text-secondary); font-size:.76rem; }
+.bellList { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; max-height:210px; overflow:auto; }
+.bellList li { display:flex; justify-content:space-between; gap:10px; padding-bottom:8px; border-bottom:1px solid var(--border); font-size:.73rem; }
+.bellList li:last-child { border-bottom:0; padding-bottom:0; }
+.bellLabel { color:var(--text-primary); font-weight:600; }
+.bellMeta { color:var(--gold); font-weight:800; white-space:nowrap; }
+.drawer { position:absolute; left:0; top:56px; width:230px; padding:8px; display:grid; gap:4px; border-radius:16px; border:1px solid var(--border); background:#151b25; box-shadow:0 18px 40px rgba(0,0,0,.42); }
+.drawerItem { display:flex; align-items:center; gap:10px; width:100%; padding:10px 11px; border:0; border-radius:10px; background:transparent; color:var(--text-secondary); font-size:.75rem; font-weight:700; text-align:left; cursor:pointer; }
+.drawerItem:hover { color:var(--text-primary); background:rgba(240,193,75,.055); }
+.drawerItem svg { color:var(--gold); }
+@media (max-width:767px) {
+  .wrap { margin-bottom:15px; }
+  .row { gap:9px; min-height:44px; }
+  .menuBtn,.iconBtn { width:36px; height:36px; flex-basis:36px; }
+  .greetingTitle { font-size:1.05rem; }
+  .greetingSub { font-size:.68rem; }
+  .drawer { top:49px; width:210px; }
+}
+@media (max-width:420px) {
+  .greetingTitle { font-size:.98rem; }
+  .greetingSub { font-size:.64rem; }
+}

@@ -1,0 +1,16 @@
+.wrap { position:relative; width:100%; padding-top:28px; }
+.tick { position:absolute; top:0; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; transition:left 1s var(--ease-smooth); white-space:nowrap; }
+.tick span { font-size:.66rem; font-weight:800; color:#241b08; background:linear-gradient(155deg,var(--gold-soft),var(--gold)); border-radius:999px; padding:3px 8px; box-shadow:0 2px 7px rgba(0,0,0,.28); }
+.tickArrow { width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid var(--gold); }
+.track { position:relative; width:100%; height:12px; border-radius:999px; background:#272d37; border:1px solid rgba(255,255,255,.08); box-shadow:inset 0 2px 5px rgba(0,0,0,.32); overflow:hidden; }
+.fill { position:relative; height:100%; border-radius:999px; background:linear-gradient(90deg,var(--gold-strong),var(--gold-soft)); box-shadow:0 0 12px rgba(240,193,75,.18), inset 0 1px 0 rgba(255,255,255,.38); transition:width 1s var(--ease-smooth); }
+.fillClip { position:absolute; inset:0; overflow:hidden; border-radius:inherit; }
+.fillShine { position:absolute; inset:0; background:linear-gradient(100deg,transparent,rgba(255,255,255,.42),transparent); animation:fillShineSweep 3.2s ease-in-out infinite; }
+@keyframes fillShineSweep { 0%{transform:translateX(-120%)} 60%,100%{transform:translateX(220%)} }
+.fillEdge { position:absolute; top:50%; right:0; width:7px; height:7px; border-radius:50%; transform:translate(50%,-50%); background:#fff8df; box-shadow:0 0 7px 2px rgba(240,193,75,.7); }
+.footerRow { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:10px; }
+.remaining { font-size:.72rem; font-weight:600; color:var(--text-secondary); }
+.activityLink { flex-shrink:0; display:inline-flex; align-items:center; gap:3px; border:0; background:transparent; color:var(--gold-soft); font-size:.72rem; font-weight:700; cursor:pointer; padding:3px 0; }
+.activityLink:hover { color:#fff0bc; }
+@media (max-width: 480px) { .wrap { padding-top:25px; } .footerRow { align-items:flex-start; } .activityLink { display:none; } .remaining { font-size:.68rem; } }
+@media (prefers-reduced-motion: reduce) { .fillShine { animation:none; display:none; } }

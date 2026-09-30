@@ -1,0 +1,12 @@
+.header { display:flex; align-items:center; gap:6px; margin:0 0 9px; color:var(--gold); font-size:.69rem; font-weight:800; text-transform:uppercase; letter-spacing:.09em; }
+.row { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.stat { display:flex; align-items:center; gap:10px; min-width:0; padding:9px 12px; border:1px solid rgba(255,255,255,.075); border-radius:14px; background:rgba(255,255,255,.026); }
+.iconWrap { display:grid; place-items:center; width:32px; height:32px; flex:0 0 32px; border-radius:50%; }
+.iconWrap.purple { background:rgba(154,123,232,.13); color:#9a7be8; }
+.iconWrap.blue { background:rgba(105,135,197,.13); color:#7f9ad0; }
+.iconWrap.orange { background:rgba(240,130,60,.11); color:#e89357; }
+.textWrap { min-width:0; overflow:hidden; }
+.value { font-family:var(--font-display); font-size:.86rem; line-height:1.1; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.label { margin-top:2px; font-size:.64rem; color:var(--text-muted); white-space:nowrap; }
+@media (max-width:480px) { .row{gap:6px}.stat{padding:8px 6px;gap:6px}.iconWrap{width:27px;height:27px;flex-basis:27px}.iconWrap svg{width:14px;height:14px}.value{font-size:.74rem}.label{display:none} }
+@media (max-width:360px) { .stat{flex-direction:column;justify-content:center;text-align:center;padding:7px 2px}.textWrap{width:100%}.value{font-size:.66rem} }
